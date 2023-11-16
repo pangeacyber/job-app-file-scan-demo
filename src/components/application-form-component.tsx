@@ -47,6 +47,7 @@ export function ApplicationFormComponent() {
           <p>Score: {respBody?.data?.score}</p>
           <p>Categories: {respBody?.data?.category?.toString()}</p>
           {fileIntelMode ? <p>Hash: {respBody?.data?.hash}</p> : <></>}
+          URL: {"url" in respBody?.data ? <a className="underline" href={respBody?.data?.url}> {respBody?.data?.url}</a> : <p>Not uploaded to storage</p>}
           </div>,
           className: respBody?.data?.verdict == "malicious" ? "bg-red-500 text-white" : (respBody?.data?.verdict == "suspicious" ? "bg-orange-400 text-white" : "bg-green-400 text-white")
         })

@@ -8,6 +8,7 @@ import { promisify } from 'util';
 import scanFile from "@/lib/pangea-filescan";
 import crypto from "crypto";
 import fileIntel from "@/lib/pangea-fileintel";
+import { put } from '@vercel/blob';
 
 const writeFileAsync = promisify(fs.writeFile);
 
@@ -51,6 +52,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 if("error" in scanResponse) {
                     return res.status(502).json(scanResponse);
                 } else {
+                    // Check if malicious
+                    if((scanResponse as any)?.data?.verdict != "suspicious" && (scanResponse as any)?.data?.verdict != "malicious") {
+                        try {
+                            // Upload file to Vercel blob
+                            const blob = await put((file as File[])[0].originalFilename as string, rawData, {
+                                access: 'public',
+                            });                 
+                            if("url" in blob) {
+                                (scanResponse as any).data.url = blob["url"];
+                            }   
+                        } catch (e) {
+                            console.error(e)
+                        }
+                    }
                     return res.status(200).json(scanResponse);
                 }
             });
