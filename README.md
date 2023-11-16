@@ -1,40 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Job Application File Scan Demo
 
-## Getting Started
+This is a simple job application that scans resumes before upload. The app uses Pangea's file scan APIs to prevent malicious files from being uploaded. The app utilizes shows how you could utilize file intel as well as deep file scan to be able to effectively scan files before they get uplaoded to a storage server.
 
-First, run the development server:
+![App demo](./job-file-scan-demo.gif)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation and Setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Create a free account on [Pangea](https://pangea.cloud/services/file-scan/?utm_source=github&utm_medium=job-app-file-scan-demo)
+4. Enable the [file scan](https://console.pangea.cloud/service/file-scan/?utm_source=github&utm_medium=job-app-file-scan-demo) and [file intel](https://console.pangea.cloud/service/file-scan/?utm_source=github&utm_medium=job-app-file-scan-demo) by extending the same Pangea token
+5. Rename the `.env.example` file to `.env.local` and replace the `PANGEA_TOKEN` and `PANGEA_DOMAIN` from the Pangea console
+6. Start the nextJS app with `npm run dev`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Navigate to the app in your browser
+2. Fill out the job application form
+3. Upload your resume
+4. Play around with the toggle to try file intel vs file hashes
+5. The app will scan your resume for malicious files before allowing you to submit your application
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Watch it in action
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To watch this demo in action, head over to the [webinar recording](https://www.reversinglabs.com/webinars/exposing-dark-side-of-code-thankyou?utm_source=github&utm_medium=utm_medium=job-app-file-scan-demo&ref=pangea) held by [Reversing Labs](https://www.reversinglabs.com/?ref=pangea&utm_source=github&utm_medium=job-app-file-scan-demo) and [Pangea](https://pangea.cloud/?utm_source=github&utm_medium=job-app-file-scan-demo). Jump to the timestamp `36:00`.
 
-## Learn More
+## Dummy Malware Samples
+For dummy test malware samples to play with, download the eicar.txt file from [EICar's webiste](https://eicar.org/download-anti-malware-testfile?ref=pangea.cloud), or you could also generate malicious PDFs using [open-source repo jonaslejon/malicious-pdf](https://github.com/jonaslejon/malicious-pdf).
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! Please submit a pull request with any changes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
