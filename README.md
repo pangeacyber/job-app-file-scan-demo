@@ -1,3 +1,6 @@
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/pangeacyber/job-app-file-scan-demo)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/pangeacyber/job-app-file-scan-demo?file=README.md)
+
 # Job Application File Scan Demo
 
 This is a simple job application that scans resumes before upload. The app uses Pangea's file scan APIs to prevent malicious files from being uploaded. The app utilizes shows how you could utilize file intel as well as deep file scan to be able to effectively scan files before they get uplaoded to a storage server.
