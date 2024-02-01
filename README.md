@@ -3,7 +3,7 @@
 
 # Job Application File Scan Demo
 
-This is a simple job application that scans resumes before upload. The app uses Pangea's file scan APIs to prevent malicious files from being uploaded. The app utilizes shows how you could utilize file intel as well as deep file scan to be able to effectively scan files before they get uplaoded to a storage server.
+This is a simple job application that scans resumes before upload. The app uses Pangea's file scan APIs to prevent malicious files from being uploaded. The app utilizes shows how you could utilize file intel as well as deep file scan to be able to effectively scan files before they get uploaded to a storage server.
 
 ![App demo](./job-file-scan-demo.gif)
 
@@ -29,7 +29,7 @@ This is a simple job application that scans resumes before upload. The app uses 
 To watch this demo in action, head over to the [webinar recording](https://www.reversinglabs.com/webinars/exposing-dark-side-of-code-thankyou?utm_source=github&utm_medium=utm_medium=job-app-file-scan-demo&ref=pangea) held by [Reversing Labs](https://www.reversinglabs.com/?ref=pangea&utm_source=github&utm_medium=job-app-file-scan-demo) and [Pangea](https://pangea.cloud/?utm_source=github&utm_medium=job-app-file-scan-demo). Jump to the timestamp `36:00`.
 
 ## Dummy Malware Samples
-For dummy test malware samples to play with, download the eicar.txt file from [EICar's webiste](https://eicar.org/download-anti-malware-testfile?ref=pangea.cloud), or you could also generate malicious PDFs using [open-source repo jonaslejon/malicious-pdf](https://github.com/jonaslejon/malicious-pdf).
+For dummy test malware samples to play with, download the `eicar.txt` file from [EICar's webiste](https://eicar.org/download-anti-malware-testfile?ref=pangea.cloud), or you could also generate malicious PDFs using [open-source repo jonaslejon/malicious-pdf](https://github.com/jonaslejon/malicious-pdf).
 
 ## Contributing
 
