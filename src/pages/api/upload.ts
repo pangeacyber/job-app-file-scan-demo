@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const form = new IncomingForm();
 
         if(form) {
-            form.parse(req, async (err: any, fields: Fields<string>, files: Files<string>) => {
+            form.parse(req, async (err: unknown, fields: Fields<string>, files: Files<string>) => {
                 if (err) {
                 res.status(500).json({ error: 'Error parsing file' });
                 return;

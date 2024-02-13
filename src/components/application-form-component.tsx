@@ -53,7 +53,7 @@ export function ApplicationFormComponent() {
         })
       }
 
-    } catch (e: any) {
+    } catch (e) {
       console.error(e)
     }
   }
@@ -126,7 +126,7 @@ export function ApplicationFormComponent() {
               </>
             )}
               <Input className="sr-only" id="resume" type="file"
-              onChange={(e: any) => setFile(e.target.files?.[0])} />
+              onChange={(e) => setFile(e.target.files?.[0])} />
             </label>
           </div>
         </div>
