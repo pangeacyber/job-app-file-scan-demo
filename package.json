@@ -20,7 +20,7 @@
     "clsx": "^2.1.1",
     "formidable": "^3.5.1",
     "lucide-react": "^0.441.0",
-    "next": "14.2.11",
+    "next": "14.2.12",
     "pangea-node-sdk": "^3.11.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
