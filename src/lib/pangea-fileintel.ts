@@ -12,9 +12,12 @@ const fileIntel = async (fileHash: string) => {
 
     console.log("Checking file...");
 
-    const options = { provider: "reversinglabs", verbose: true, raw: true };
     try {
-        const response = await fileIntel.hashReputation(fileHash, 'sha256', options);
+        const response = await fileIntel.hashReputation(
+            fileHash,
+            'sha256',
+            { provider: "reversinglabs", verbose: true, raw: true }
+        );
         console.log("Result: ", response.result.data);
 
         return {"data": {...response.result.data, "hash": fileHash}}
